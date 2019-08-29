@@ -1,0 +1,255 @@
+:root {
+    --main-color: azure;
+    --secondary-color: white;
+    --main-text-color: #3e5869;
+    --secondary-text-color: #b0c7d6;
+    --send-message-form: #F5F5F5;
+   
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+    font-weight: 200;
+    color: red; 
+    
+    
+}
+
+#root {
+    height: 100%;
+    background-color: greenyellow;
+}
+
+.app {
+   
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
+    grid-template-areas: 
+        "m m m m m r"
+        "m m m m m r"
+        "m m m m m r"
+        "m m m m m r"
+        "m m m m m r"
+        "s s s s s n";
+}
+
+.new-room-form {
+    grid-area: n;
+    
+}
+
+.rooms-list {
+    grid-area: r;
+}
+
+.message-list {
+    grid-area: m;
+}
+
+.send-message-form {
+    grid-area: s;
+}
+
+/* REST OF CSS */
+.rooms-list {
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin:10px;
+    padding: 10px;
+    background-color: lightskyblue;
+    overflow: scroll;
+    height: 100%;
+    width:220px;
+    
+}
+
+.rooms-list ul {
+    list-style-type: none;    
+    padding: 0;
+    overflow: scoll;
+    
+    
+}
+
+.rooms-list li {
+    margin: 10px 0;
+     background-color: palegreen;
+     border-color: 2px solid black;
+    
+    
+}
+
+.rooms-list h3 {
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    background-color: red;
+    color:white;
+    border-radius:8px;
+    border-color: 2px solid black;
+}
+
+.rooms-list .room a {
+    color: black;
+    font-weight: 200;
+    text-decoration: none;
+    font-family: sans-serif;
+    text-align: center;
+    border-color: 2px solid black;
+    
+ }
+
+.rooms-list .room.active a {
+    color: var(--secondary-color);
+    background-color: red;
+    padding: 5px;
+    border-radius:8px;
+    text-align: center;
+}
+
+.new-room-form {
+    padding: 0 5px;
+    background-color: lightskyblue;
+    color: var(--main-text-color);
+}
+
+.new-room-form form {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightskyblue;
+}
+
+.new-room-form input {
+    width: 155px;
+    background: greenyellow;
+    border-radius:5px;
+    padding:10px;
+    
+}
+
+.new-room-form button {
+    
+    background-color: red;
+    border-radius:5px;
+    border-color: black;
+    width:38px;
+    height:38px;
+    color: white;
+    border: 0;
+} 
+
+.new-room-form input::placeholder {
+    color: var(--main-text-color);
+    font-weight: 200;
+    margin:5px;
+    
+}
+
+.new-room-form input:focus {
+    outline-width: 0;
+}
+
+.new-room-form input {
+    border: 0;
+}
+
+.new-room-form button {
+    border: 0;
+}
+
+.message {
+    margin: 15px 0;
+    background-color:palegreen;
+    width:140px;
+    border-radius: 10px;
+    
+}
+
+.message .message-username {
+    font-size: 11px;
+    color: red;
+    opacity: 0.9;
+    padding:5px;
+    border-radius: 10px;
+    width:170px;
+    margin:5px;
+    
+}
+.message .message-text {
+    background-color: palegreen;
+    color: black;
+    display: inline;
+    padding: 4px 8px;
+    border-radius: 8px;
+    margin:5px;
+    font-size:12px;
+}
+
+.message-list {
+    box-sizing: border-box;
+    padding-left: 6px;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background: lightskyblue;
+    border-radius: 8px;
+}
+
+.message-list .join-room {
+    font-family: sans-serif;
+    margin:240px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    font-size: 34px;
+    font-weight: 300;
+    border-radius: 8px;
+    color:white;
+    background-color: palegreen;
+}
+
+.send-message-form {
+    background-color: lightskyblue;
+    display: flex;
+    border-radius: 8px;
+}
+
+.send-message-form input {
+    width: 400px;
+    padding: 15px 10px;
+    margin: 10px;
+    border-style: none;
+    background: var(--send-message-form);
+    font-weight: 200;
+    border-radius: 8px;
+    background-color: greenyellow;
+
+}
+
+.send-message-form input:focus {
+    outline-width: 0;
+    border-radius: 8px;
+    
+}
+
+.send-message-form input::placeholder {
+    color: var(--main-text-color);
+    border-radius: 8px;
+    
+}
+
+.help-text {
+    position: absolute;
+    top: 10px;
+    border-radius: 8px;
+}
+
+

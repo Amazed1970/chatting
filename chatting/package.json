@@ -1,0 +1,21 @@
+{
+  "name": "co06e-87c41ede891d",
+  "dependencies": {
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "@pusher/chatkit": "0.7.17",
+    "dotenv": "6.0.0",
+    "react-scripts": "1.1.5"
+  },
+  "devDependencies": {
+    "webpack": "^2.0",
+    "babel-core": "^6.0",
+    "babel-loader": "^7.0",
+    "babel-preset-env": "*",
+    "babel-preset-react": "*"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w"
+  }
+}
